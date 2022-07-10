@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Project 1</title>
+</head>
+<body>
+
+    <h1>The Robustilicious Shop</h1>
+    <div class="items">
+        <img src="cart.jpg" alt="cart" class="cart">
+        <p id="cart">0 items inside cart</p>
+        <b><p id="cost">Total cost: $0</p></b>
+        <p>Items inside cart:</p>
+        <p id="apple"></p>
+        <p id="orange"></p>
+        <p id="grape"></p>
+        <p id="watermelon"></p>
+    </div>
+    <br>
+ 
+    <div>
+        <img src="apples.jpg" alt="apples">
+        <p class="price">Price: $2.00 per lb</p>
+        <button onclick="addCart(); addApples()" class="add">Add to cart</button>
+        <button onclick="removeCart(); removeApples()" class="remove">Remove from cart</button>
+    </div>
+    <br>
+
+    <div>
+        <img src="oranges.jpg" alt="oranges">
+        <p class="price">Price: $3.00 per lb</p>
+        <button onclick="addCart(); addOranges()" class="add">Add to cart</button>
+        <button onclick="removeCart(); removeOranges()" class="remove">Remove from cart</button>
+    </div>
+    <br>
+
+    <div>
+    <img src="grapes.jpg" alt="grapes">
+    <p class="price">Price: $1.50 per lb</p>
+    <button onclick="addCart(); addGrapes()" class="add">Add to cart</button>
+    <button onclick="removeCart(); removeGrapes()" class="remove">Remove from cart</button>
+    </div>
+    <br>
+
+    <div>
+    <img src="watermelons.jpg" alt="watermelons">
+    <p class="price">Price: $4.00 per lb</p>
+    <button onclick="addCart(); addWatermelons()" class="add">Add to cart</button>
+    <button onclick="removeCart(); removeWatermelons()" class="remove">Remove from cart</button>
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>

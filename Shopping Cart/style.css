@@ -1,0 +1,72 @@
+img {
+    height: 250px;
+    width: 250px;
+    border-radius: 125px;
+}
+
+/* the "cart" class is the cart image*/
+.cart{
+    /*display: block;*/
+    height: 50px;
+    width: 50px;
+    border: solid;
+    border-radius: 25px;
+    float: left;
+    /*margin-right: 20px;
+    margin-top: 10px;*/
+}
+
+/* the "item" class is the background of the cart image*/
+
+.items {
+    background-color: purple;
+    color: beige;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    position: sticky;
+    top: 0;
+
+}
+
+.add {
+background-color: limegreen;
+border: none;
+height: 50px;
+border-radius: 10px;
+color: black;
+font-weight: bold;
+padding: 15px;
+}
+
+.remove {
+    background-color: red;
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.price {
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+div {
+    border: solid;
+    width: 250px;
+    padding: 10px 20px 10px 20px;
+    background-color: darkgrey;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    text-align: center;
+    position: absolute;
+    left: 40%
+}
