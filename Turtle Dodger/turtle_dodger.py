@@ -8,6 +8,21 @@ wn.bgcolor("black")
 wn.setup(width=400, height=600)
 wn.tracer(0)
 
+# Draw border
+border_pen = turtle.Turtle()
+border_pen.speed(0)
+border_pen.color("white")
+border_pen.penup()
+border_pen.setposition(-200,-300)
+border_pen.pendown()
+border_pen.pensize(3)
+for side in range(2):
+    border_pen.fd(400)
+    border_pen.lt(90)
+    border_pen.fd(600)
+    border_pen.lt(90)    
+border_pen.hideturtle()
+
 #Character "A" Apperance
 char_a = turtle.Turtle()
 char_a.speed(0)
@@ -263,11 +278,12 @@ while True:
     #Arrow_1 Collision
 
     if (arrow_1.ycor() < char_a.ycor() + 40) and (arrow_1.xcor() > char_a.xcor() - 30) and (arrow_1.xcor() < char_a.xcor() + 30):
+        winsound.PlaySound("hit.wav", winsound.SND_ASYNC)
         arrow_1.goto(0, 240) #240 for y axis so arrow is not covering the score board
         lives -= 1
         pen.clear()
         pen.write("Score: {}  Lives: {}".format(score, lives), align="center", font=("Courier", 24, "normal"))
-        winsound.PlaySound("hit.wav", winsound.SND_ASYNC)
+
     
     #Arrow_2 Collision
 
