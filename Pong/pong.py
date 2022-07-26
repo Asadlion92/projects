@@ -42,12 +42,12 @@ paddle_b.goto(350, 0)
 ball = turtle.Turtle()
 ball.speed(0)
 ball.shape("circle")
-ball.color("white")
+ball.color("green")
 ball.penup()
 ball.goto(0, 0)
-ball.dx = 0.15
+ball.dx = 0.18
     # dx to move the ball to the right by 2 pixels
-ball.dy = -0.15
+ball.dy = -0.18
 
 #  Pen
 pen = turtle.Turtle()
@@ -56,22 +56,23 @@ pen.color("black")
 pen.penup()
 pen.hideturtle()
 pen.goto(0, 260)
-pen.write("Player A: 0  Player B: 0", align="center", font=("Courier", 24, "normal"))
+pen.write("Player 1: 0  Player 2: 0", align="center", font=("Courier", 24, "normal"))
 
-# Horizontal Border
+# Border
 border_pen = turtle.Turtle()
 border_pen.speed(0)
-border_pen.color("white")
 border_pen.penup()
 border_pen.setposition(-400,-300)
 border_pen.pensize(3)
+border_pen.pendown()
 for side in range(2):
-    border_pen.pendown()
+    border_pen.color("white")
     border_pen.fd(800)
     border_pen.lt(90)
-    border_pen.penup()
+    border_pen.color("red")
     border_pen.fd(600)
     border_pen.lt(90)
+border_pen.penup()
 border_pen.hideturtle()
 
 # Divider
@@ -83,9 +84,11 @@ divider_pen.pensize(3)
 divider_pen.penup()
 divider_pen.setposition(0,-300)
 divider_pen.setheading(90)
-divider_pen.pendown()
-divider_pen.fd(600)
-divider_pen.penup()
+for divid in range(10):
+    divider_pen.pendown()
+    divider_pen.fd(30)
+    divider_pen.penup()
+    divider_pen.fd(30)
 divider_pen.hideturtle()
 
 
@@ -160,14 +163,14 @@ while True:
         ball.dx *= -1
         score_a += 1
         pen.clear()
-        pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
+        pen.write("Player 1: {}  Player 2: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
 
     if ball.xcor() < -390:
         ball.goto(0, 0)
         ball.dx *= -1
         score_b += 1
         pen.clear()
-        pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
+        pen.write("Player 1: {}  Player 2: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
 
     #  Paddle and ball collisions for bouncing 
     if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor() + 40 and ball.ycor() > paddle_b.ycor() - 40):
