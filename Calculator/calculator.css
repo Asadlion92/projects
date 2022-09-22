@@ -1,0 +1,62 @@
+.calcBackground {
+  border: solid 4px black;
+  width: 300px;
+  height: 270px;
+  padding-top: 20px;
+  border-radius: 20px;
+  background-color: gray;
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px;
+  justify-content: space-between;
+}
+
+button {
+  width: 60px;
+  height: 30px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.btnOperations {
+  background-color: orange;
+}
+
+.btnNumbers {
+  background-color: black;
+  color: white;
+}
+
+.screen {
+  border: solid 1px black;
+  height: 20px;
+  width: 260px;
+  background-color: white;
+  text-align: end;
+  border-radius: 5px;
+}
+
+.center {
+  margin: auto;
+}
+
+button:hover {
+  color: black;
+  background-color: yellow;
+}
+
+button:active {
+  color: red;
+  background-color: white;
+}
